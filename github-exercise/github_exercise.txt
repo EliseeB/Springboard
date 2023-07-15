@@ -43,7 +43,3 @@ Let’s start by taking a bit of time to practice the git workflow below. It is 
   git push 
 
 
-
-Part II - Put your memory game on GitHub pages
-
-Using GitHub pages, deploy your memory game from the previous unit so that you can share them with anyone!
