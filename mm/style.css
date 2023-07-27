@@ -1,0 +1,30 @@
+*{
+    font-family: 'Roboto', sans-serif;
+}
+
+h2 {
+    font-size: 2rem;
+    
+}
+
+main {
+    display: grid;
+    place-items: center;
+    background: beige;
+    height: 70vh;
+}
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 150px);
+   gap: 1rem;
+   
+}
+
+div {
+    height: 80px;
+    width: 80px;
+    border: 3px solid rgb(85, 84, 84);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
