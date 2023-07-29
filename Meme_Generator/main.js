@@ -34,7 +34,7 @@ form.addEventListener('submit', event => {
     deleteButton.innerText = 'Delete'
 
     // Check if an image URL is provided
-    if (srcImage) {
+    if (srcImage && topTextValue && bottomTextValue) {
         // Create a div container for the meme and append the meme elements to it
         const div = document.createElement('div')
         div.classList.add('memeContainer')
@@ -43,9 +43,10 @@ form.addEventListener('submit', event => {
         div.appendChild(image)
         div.appendChild(deleteButton)
         container.appendChild(div)
+        form.reset()     // Reset the form after adding the meme 
     } else {
-        // If no image URL is provided, show an alert message
-        alert('Please add an URL')
+        // If no image URL, top Text, or bottom text is provided, show an alert message
+        alert('Missing text from one or more input field(S)')
     }
 })
 
@@ -58,7 +59,5 @@ container.addEventListener('click', event => {
         // Remove the meme container when the delete button is clicked
         target.parentElement.remove()
     }
-
-    // Reset the form after adding the meme or clicking the delete button
-    form.reset()
+  
 })
