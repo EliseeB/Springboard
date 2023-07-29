@@ -33,7 +33,7 @@ form.addEventListener('submit', event => {
     deleteButton.classList.add('delete')
     deleteButton.innerText = 'Delete'
 
-    // Check if an image URL is provided
+    // Check if the image URL, top text and bottom text are provided
     if (srcImage && topTextValue && bottomTextValue) {
         // Create a div container for the meme and append the meme elements to it
         const div = document.createElement('div')
