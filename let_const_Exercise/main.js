@@ -30,3 +30,5 @@ const PI = 3.14
 // - What is hoisting?
 
         // The behavior where variable and function declarations are moved to the top of their containing scope  before the code is executed. Meaning you can use variables and functions before they are actually declared in the code.
+
+    
