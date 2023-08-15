@@ -1,0 +1,44 @@
+*{
+    margin: 1rem;
+    padding: 0;
+    font-family: Helvetica, sans-serif;
+    font-size: 2vw;
+}
+
+nav {
+    text-align: center;
+}
+
+.form {
+    display: flex;
+}
+
+input[type="number"] {
+    width: 10%;
+    text-align: center;
+}
+.rating-btn {
+    padding: 0.5rem;
+    background-color: #069ee0;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.rating-btn:hover {
+    background-color: #45bff4;
+    scale: 1.05;
+}
+
+
+
+.delete-btn {
+    padding: 0.5rem;
+    background-color: #f84343;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.delete-btn:hover {
+    color: aliceblue;
+    scale: 1.05;
+
+}
