@@ -1,0 +1,51 @@
+How Web Works Exercise
+
+Part One: Solidify Terminology
+
+In your own terms, define the following terms:
+
+
+- What is HTTP?
+    
+    Hypertext Transfer Protocol
+
+- What is a URL?
+
+    Uniform Resource Locator (works like home address or a phone number fro a website)
+
+- What is DNS?
+
+    Domain Name System. Converts urls(google.com, meta.com) into IP addresses
+
+
+- What is a query string?
+
+    Allows you to pass key-values pairs to the URL
+
+
+- What are two HTTP verbs and how are they different?
+        
+        GET  for Asking and receiving data from a server
+        POST for sending data to a server
+
+
+- What is an HTTP request?
+
+    Request from a client to a server (using HTTP protocol)
+
+
+- What is an HTTP response?
+
+    Response from the server to a client using HTTP protocol.
+
+
+- What is an HTTP header? Give a couple examples of request and response headers you have seen.
+
+     A header is  additional info about the request or response
+        ex: Cookies, Cache
+
+
+- What are the processes that happen when you type “http://somesite.com/some/page.html” into a browser?
+
+        When you type a URL in a browser, it finds the correct web server for the site, sends a request for the page, receives the page's content, and then displays it. This involves steps like translating the URL into an IP address, establishing a connection, sending a request, processing the request on the server, receiving the response, rendering the content, and displaying the final web page for you to see.
+
