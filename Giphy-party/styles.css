@@ -1,0 +1,17 @@
+header {
+    margin-bottom: 3rem;
+}
+
+button {
+    cursor: pointer;
+}
+
+.imageContainer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+div{
+    margin: 2rem;
+}
