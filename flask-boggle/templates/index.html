@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Boggle</title>
+    <link rel="stylesheet" href="/static/boggle.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+
+<body>
+    <header class="mb-4">
+        <nav>
+            <nav class="navbar bg-body-tertiary">
+                <div class="container-fluid">
+                    <a class="navbar-brand fs-1" href="/">
+
+                        Boggle
+                    </a>
+                </div>
+            </nav>
+        </nav>
+    </header>
+
+    <main class="container">
+
+        <section id="boggle" class="board">
+
+            <div class="row ">
+                <div class="row border rounded p-4">
+                    {% for row in board %}
+                    <div class="">
+                        <div class=" text-center d-flex">
+                            {% for cell in row %}
+                            <div class=" col border border-3 rounded p-4 fw-bold">{{ cell }}</div>
+                            {% endfor %}
+                        </div>
+
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <section class="row mt-4">
+                <div class="col">
+                    <p>High Score:
+                        <b>{{ highscore }}</b>
+                        in {{ nplays }} plays
+                    </p>
+
+                    <p>
+                        Score: <b class="score">0</b>
+                        Seconds Left: <b class="timer"></b>
+                    </p>
+
+                </div>
+
+                <div class="col-12">
+                    <form method="POST" class="add-word ">
+                        <input name="word" class="word form-control w-25 mb-2" autofocus>
+                        <button class="btn btn-primary btn-lg">Enter</button>
+                    </form>
+                </div>
+            </section>
+            <section class="row">
+                <div class="col">
+                    <p class="msg">
+                        <!--  dynamic msg -->
+                    </p>
+
+                    <ul class="words">
+                        <!--  append words here as they score -->
+                    </ul>
+                </div>
+            </section>
+        </section>
+
+    </main>
+
+    <script src="http://unpkg.com/jquery"></script>
+    <script src="https://unpkg.com/axios@0.19.0/dist/axios.js"></script>
+    <script src="/static/boggle.js"></script>
+    <script>
+        let game = new BoggleGame("boggle", 60);
+    </script>
+</body>
+
+</html>
