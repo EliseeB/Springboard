@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block title %} Edit profile {% endblock %}
+
+
+{% block content %}
+
+<section class="row">
+
+    <div class="col-12 mb-5 mt-3">
+        <h2>Edit <span class="fw-bold">{{user.first_name}} {{user.last_name}}</span>'s data</h2>
+    </div>
+
+    <div class="col">
+
+        <form method="post">
+            <div class="mb-3">
+                <label for="first_name" class="form-label">First Name</label>
+                <input type="text" class="form-control" id="first_name" name="first_name" required placeholder="John"
+                    value="{{user.first_name}}">
+            </div>
+
+            <div class="mb-3">
+                <label for="last_name" class="form-label">Last Name</label>
+                <input type="text" class="form-control" id="last_name" name="last_name" required placeholder="Doe"
+                    value="{{user.last_name}}">
+            </div>
+
+            <div class="mb-3">
+                <label for="image_url" class="form-label">Enter a URL for your profile picture</label>
+                <input type="url" class="form-control" id="image_url" name="image_url" required pattern="https://.*"
+                    size="50" placeholder="https://example.com" value="{{user.image_url}}">
+            </div>
+
+            <a href='/users'><button class="btn btn-primary btn-lg">Cancel</button></a>
+
+            <button type="submit" class="btn btn-success btn-lg">Save</button>
+
+        </form>
+
+    </div>
+
+</section>
+
+{% endblock %}
