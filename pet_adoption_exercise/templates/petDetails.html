@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %} {{pet.name}}'s details {% endblock %}
+
+{% block content %}
+
+<div class="col-12 mb-4 mt-3 text-center">
+    <h2>{{pet.name}}'s details</h2>
+</div>
+
+<div class="fs-4">
+    <p>Name: <span class="fw-bold">{{pet.name}}</span></p>
+    <p>Age: <span class="fw-bold">{{pet.age}}</span></p>
+    <p>Notes: <span class="fw-bold">{{pet.notes}}</span></p>
+    <p>Status: {% if pet.available %} {{pet.name}} is <span class="fw-bold text-success">available</span> for adoption.
+        {%
+        else %}
+        {{pet.name}} is <span class="fw-bold text-danger">unavailable</span>. {%
+        endif %}</p>
+    <form>
+        <a href="/{{pet.id}}/edit" class="btn btn-lg btn-success">Edit</a>
+        <a href="/" class="btn btn-lg btn-primary">Home</a>
+    </form>
+</div>
+
+
+
+
+{% endblock %}

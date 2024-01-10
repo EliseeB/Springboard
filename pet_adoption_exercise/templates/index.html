@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block title %} Home {% endblock %}
+
+{% block content %}
+
+<h1>All currently available pets</h1>
+
+<div class="col-12 mb-5 mt-3">
+    <a href="/new" class="btn btn-success btn-lg"> Add a new pet</a>
+</div>
+
+<div class="col-12 d-flex flex-wrap gap-4 ">
+    {% for pet in pets %}
+
+
+    <div class="card g-col-4">
+
+        <img src="{{pet.photo_url}}" class="card-img-top" alt="{{pet.name}}">
+        <div class="card-body">
+            <span class="card-title fw-bold fs-4"> {{ pet.name }}</span>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                card's
+                content.</p>
+            <a href="/{{pet.id}}" class="btn btn-primary">{{pet.name}}'s details</a>
+        </div>
+    </div>
+
+
+
+    {% endfor %}
+
+</div>
+
+{% endblock %}

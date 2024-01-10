@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block title %} Edit {{pet.name}}'s data{% endblock %}
+
+{% block content %}
+
+<div class="col">
+    <h2 class="fs-3 fw-bold text-center mb-5 mt-4">Edit <span class="text-primary">{{ pet.name}}</span>'s data</h2>
+</div>
+
+<div class="col-12 d-flex justify-content-center">
+
+    <form class="border w-50 p-3 fs-5">
+
+        {{ form.hidden_tag() }}
+
+        {% for field in form if field.widget.input_type != 'hidden' %}
+
+        <div class=" mb-3">
+
+            {{ field.label(class_='form-label fw-bold') }}
+            {{ field(class_='form-control fs-6') }}
+        </div>
+
+
+        {% endfor %}
+
+        <button formaction="/{{pet.id}}/edit" formmethod="post" class="btn btn-lg btn-success">Update</button>
+        <a href="/" class="btn btn-lg bg-danger-subtle  border border-2 border-danger">Cancel</a>
+    </form>
+
+</div>
+
+{% endblock %}
