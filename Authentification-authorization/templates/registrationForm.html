@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block title %} Register {% endblock %}
+
+{% block content %}
+
+<div class="row">
+    <div class="col-12">
+        <h1>Register</h1>
+    </div>
+
+    <div class="col-12">
+
+        <form method="post">
+
+            {{ form.hidden_tag() }}
+
+            {% for field in form if field.widget.input_type != 'hidden' %}
+
+            <div class="mb-3">
+
+                {{ field.label(class_='form-label fw-bold') }}
+                {{ field(class_='form-control') }}
+
+            </div>
+
+            {% endfor %}
+
+            <div>
+                <button class="btn btn-lg btn-primary fw-bold">register</button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+{% endblock %}
